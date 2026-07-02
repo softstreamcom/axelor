@@ -699,6 +699,111 @@
       color: var(--muted);
     }
 
+    .screen-body.photo {
+      padding: 0;
+      height: 200px;
+      overflow: hidden;
+    }
+    .screen-body.photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* VIDEO SECTION */
+    .video-section {
+      padding: 90px 0;
+      background: var(--panel);
+    }
+    .video-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--bg-alt);
+      box-shadow: var(--shadow);
+    }
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #0B1A33;
+    }
+    .video-frame video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .video-caption {
+      padding: 18px 24px;
+      text-align: center;
+    }
+    .video-caption p {
+      font-size: 12px;
+      color: var(--muted);
+      font-family: 'IBM Plex Mono', monospace;
+      letter-spacing: 0.04em;
+    }
+    .video-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 20px;
+    }
+
+    /* TEAM BANNER */
+    .team-banner {
+      padding: 0;
+      position: relative;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .team-banner .img-wrap {
+      width: 100%;
+      height: 340px;
+      overflow: hidden;
+      position: relative;
+    }
+    .team-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+    .team-banner .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(11,26,51,0.78) 0%, rgba(11,26,51,0.35) 45%, rgba(11,26,51,0.05) 75%);
+      display: flex;
+      align-items: center;
+    }
+    .team-banner .overlay-content {
+      color: #fff;
+      max-width: 440px;
+      padding: 0 40px;
+    }
+    .team-banner .overlay-content .mono {
+      font-size: 12px;
+      color: #9FD8CB;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .team-banner .overlay-content h3 {
+      color: #fff;
+      font-size: clamp(22px, 3vw, 30px);
+      margin-bottom: 10px;
+    }
+    .team-banner .overlay-content p {
+      color: #D7DEEA;
+      font-size: 14px;
+    }
+
     .screens-note {
       text-align: center;
       font-size: 12px;
@@ -1295,8 +1400,11 @@
       </div>
     </section>
 
-<img src="demo.png" alt="Axelor commercial"  width="1800" height="900">
-            <span class="label mono">Axelor commercial</span>
+    <!-- TEAM / OFFICE BANNER -->
+   s
+        
+        <img src="demo.png" alt="Équipe SoftStream au bureau, poste de travail avec tableau de bord"  width="1800" height="900" >
+        
 
     <!-- FLOW -->
     <section class="flow-section" id="flux">
@@ -1427,38 +1535,24 @@
 
         <div class="screen-grid">
           <div class="screen-card">
-            <div class="screen-chrome"><i></i><i></i><i></i><span>ACHATS · COMMANDES</span></div>
-            <div class="screen-body">
-              <div class="mock-rows">
-                <div class="row"><div class="c1"></div><div class="c2"></div><div class="c3">Reçu</div></div>
-                <div class="row"><div class="c1"></div><div class="c2"></div><div class="c3">Envoyé</div></div>
-                <div class="row"><div class="c1"></div><div class="c2"></div><div class="c3">Reçu</div></div>
-                <div class="row"><div class="c1"></div><div class="c2"></div><div class="c3">En cours</div></div>
-                <div class="row"><div class="c1"></div><div class="c2"></div><div class="c3">Reçu</div></div>
-              </div>
+            <div class="screen-chrome"><i></i><i></i><i></i><span>TABLEAU DE BORD</span></div>
+            <div class="screen-body photo">
+              <img src="screenshot-dashboard.png" alt="Tableau de bord SoftStream avec indicateurs et graphiques">
             </div>
             <div class="screen-caption">
-              <h4>Suivi des commandes</h4>
-              <p>Statut de chaque commande fournisseur en un coup d'œil.</p>
+              <h4>Tableau de bord</h4>
+              <p>Vue consolidée des indicateurs clés en un coup d'œil.</p>
             </div>
           </div>
 
           <div class="screen-card">
-            <div class="screen-chrome"><i></i><i></i><i></i><span>STOCK · NIVEAUX</span></div>
-            <div class="screen-body">
-              <div class="mock-bars">
-                <div class="bar" style="height:55%"></div>
-                <div class="bar b2" style="height:80%"></div>
-                <div class="bar b3" style="height:30%"></div>
-                <div class="bar" style="height:65%"></div>
-                <div class="bar b2" style="height:45%"></div>
-                <div class="bar b3" style="height:85%"></div>
-                <div class="bar" style="height:35%"></div>
-              </div>
+            <div class="screen-chrome"><i></i><i></i><i></i><span>CATALOGUE PRODUITS</span></div>
+            <div class="screen-body photo">
+              <img src="screenshot-catalogue.png" alt="Catalogue produits SoftStream avec fiches et prix">
             </div>
             <div class="screen-caption">
-              <h4>Niveaux de stock</h4>
-              <p>Visualisation immédiate des quantités disponibles par dépôt.</p>
+              <h4>Catalogue produits</h4>
+              <p>Fiches produits, prix et stock accessibles en un clic.</p>
             </div>
           </div>
 
@@ -1481,6 +1575,31 @@
           </div>
         </div>
         <p class="screens-note">Aperçus illustratifs de l'interface — une démonstration sur vos propres données est possible.</p>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="video-section" id="video">
+      <div class="container">
+        <div class="section-head" style="justify-content:center;text-align:center;">
+          <div style="margin:0 auto;">
+            <div class="mono" style="font-size:12px;color:var(--accent);letter-spacing:0.08em;font-weight:600;">EN VIDÉO</div>
+            <h2>SoftStream en quelques secondes</h2>
+            <p style="margin:0 auto;">Une présentation rapide de la plateforme, de l'achat à la facture.</p>
+          </div>
+        </div>
+        <div class="video-wrap">
+          <div class="video-frame">
+            <video controls preload="none" poster="video-poster.jpg">
+              <source src="SoftStream.mp4" type="video/mp4">
+              Votre navigateur ne prend pas en charge la lecture vidéo.
+            </video>
+          </div>
+          <div class="video-caption">
+            <p>ACHAT · STOCK · VENTE · FACTURATION — EN UNE SEULE PLATEFORME</p>
+          </div>
+        </div>
+        <p class="video-note">Vidéo à déposer dans le dossier <code>SoftStream.mp4</code> à côté de ce fichier index.html.</p>
       </div>
     </section>
 
